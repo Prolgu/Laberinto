@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/scss/normalize.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="assets/scss/styles.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-wrapp oswald" id="app">
+        <header class="header">
+            <div class="content-wrap d-flex space-between y-center">
+                <div class="d-flex y-center">
+                    <img class="logo" src="assets/images/logo.svg" width="30" alt="Logo Laberinto" />
+                    <p class="orange uppercase">
+                        Laberinto Cuántico
+                    </p>
+                </div>
+                <div class="d-flex y-center">
+                    <p>
+                        <span class="material-icons-outlined orange user-icon">
+                            account_circle
+                        </span>
+                    </p>
+                    <p class="white">
+                        Nombre Usuario
+                    </p>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="section-intro" id="intro">
+                <video autoplay muted preload loop>
+                    <source src="assets/videos/game.mp4" type="video/mp4" />
+                </video>
+                <article class="content-wrap d-flex x-center y-center">
+                    <div class="intro-text">
+                        <h2 class="title title_lg title_shadow">
+                            Laberinto Cuántico
+                        </h2>
+                        <h3 class="title arial_black title_md title_shadow">
+                            Online Gamming Forum
+                        </h3>
+                        <a href="#contact" class="button button_orange buttom_md" title="Unirse al Grupo">
+                            <span>
+                                Unirse al grupo
+                            </span>
+                        </a>
+                    </div>
+                </article>
+            </section>
+            <section class="contacto" id="contact">
+                <article class="content-wrap">
+                    <h2 class="title title_md title_orange uppercase">
+                        se un miembro exclusivo del laberinto cuántico recibe<br /> todas las novedades en tu email
+                    </h2>
+                    <form class="contact-form d-flex space-between">
+                        <div class="item-flex">
+                            <label class="white" for="name">Nombre completo<span class="orange">*</span></label>
+                            <input type="text" id="name" name="name" 
+                            placeholder="Escribe tu Nombre" required/>
+                        </div>
+                        <div class="item-flex">
+                            <label class="white" for="email">Email<span class="orange">*</span></label>
+                            <input type="email" id="email" name="email" 
+                            placeholder="Escribe tu email" required />
+                        </div>
+                        <div class="item-flex item-flex_last">
+                            <input type="submit" value="Suscripción"
+                            class="button button_orange button_sm" />
+                        </div>
+                    </form>
+                    <div class="custom-checkbox">
+                        <input type="checkbox" id="checkbox" />
+                        <label class="white d-flex" for="checkbox">
+                            <span class="material-icons-outlined uncheck">
+                                check_box_outline_blank
+                            </span>
+                            <span class="material-icons-outlined check">
+                                check_box
+                            </span>
+                            Acepto términos y condiciones
+                        </label>
+                      
+                    </div>              
+                </article>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="content-wrap d-flex y-center x-center">
+                <p class="white">
+                    &copy; 2021 - Bios Team
+                </p>
+                <a href="#intro" class="anchor-nav orange">
+                    <span class="material-icons-outlined">
+                        arrow_circle_up
+                    </span>
+                </a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

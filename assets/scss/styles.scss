@@ -1,0 +1,246 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+$orange: #ff4700;
+$orangeLight: #fd3b0a;
+$white: white;
+$black: #000;
+$black-opacity:rgba(0,0,0,.7);
+
+.orange {
+    color:$orange;
+}
+
+.white {
+    color:$white;
+}
+
+.content-wrap {
+    position:relative;
+    max-width:1080px;
+    width:100%;
+    margin:0 auto;
+    padding:0 2%;
+}
+
+.header {
+    position:fixed;
+    left:0;
+    top:0px;
+    width:100%;
+    height: 60px;
+    background: $black-opacity;
+    z-index: 900;
+    .content-wrap {
+        height:100%;
+    }
+}
+
+.d-flex {
+    display: flex;
+}
+
+.space-between { 
+    justify-content: space-between;
+} 
+
+.y-center {
+    align-items:center;
+}
+
+.x-center {
+    justify-content: center;
+}
+
+.logo {
+    filter: invert(100%);
+    margin:0 15px 0 0;
+}
+
+/*  */
+video {
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+%oswald {
+    font-family: 'Oswald', sans-serif;
+}
+
+.oswald {
+    @extend %oswald;
+}
+
+.user-icon {
+    font-size:33px;
+    margin:0 15px 0 0;
+}
+
+.section-intro {
+    position:relative;
+    height: 100vh; // viewport height -> alto de la ventana del dispositivo
+    article {
+        width:100%;
+        height:100%;
+        text-align: center;//centro todos los textos que estén dentro del article
+    }
+    video {
+        position:absolute;
+        top:0;
+        left:0;
+    }
+}
+
+.title { 
+    @extend %oswald;
+    color:$white;
+    line-height:normal;
+    &_lg {
+        font-size:60px;
+    }
+    &_md {
+        font-size:20px;
+    }
+    &_shadow {
+        // 0 - eje de las x -> los valores + dirección abajo, - dirección arriba
+        // 0 - eje de las y -> los valores + dirección left, - dirección right
+        // 0 - blur y tamaño 
+        text-shadow: 5px 5px 5px $black;
+    }
+    &_orange {
+        color:$orange;
+    }
+}
+
+.button {
+    display:inline-block;
+    line-height:40px;
+    text-align: center;
+    padding:0 30px;
+    color:$black;
+    text-decoration: none;
+    transform: scale(1);
+    transition: .25s ease-in-out;
+    &:hover {
+        transform: scale(1.1);
+    }
+    &_orange {
+        background: $orange;
+        &:hover {
+            background: $orangeLight;
+        }
+    }
+    &_sm {//button_sm
+        height:35px;
+        line-height: 35px;
+        padding:0 15px;
+    }
+}
+
+.intro-text {
+    h3 {
+        margin:25px 0 20px 0;
+    }
+    transform: scale(0);
+    animation:zoomIn 1s ease-in-out .7s forwards;
+}
+
+@keyframes zoomIn {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.contacto {
+    background: $black;
+    padding:60px 0;
+    text-align: center;
+}
+
+.contact-form {
+    margin:40px 0 0 0;
+    input[type="text"],
+    input[type="email"] {
+        color:$white;
+        width:100%;
+        height:35px;
+        background:$black;
+        border:2px solid $white;//boder de 2px de ancho de color blanco
+        padding:0 9px;
+        &:hover {
+            border-color:$orange;
+        }
+    };
+  input[type="submit"]{
+    border: none;
+    height: 35px;
+  }
+  label {
+    display:block;
+    text-align: left;
+    margin:0 0 9px 0;
+  }
+  .item-flex {
+    width: 44.7%;;
+    &_last {
+        width:auto;
+        align-self: flex-end;
+    }
+  }
+}
+
+.custom-checkbox {
+    margin:30px 0 0 0;
+    label {
+        cursor: pointer;//cambia el aspecto del cursor cuando hago hover en el elemento
+    }
+    .material-icons-outlined {
+        position: relative;
+        top:-3px;
+    }
+    input {
+        display:none;
+    }
+    //el signo + corresponde al elemento siguiente al input
+    input + label {
+        .check {
+            display:none;
+        }
+    }
+    input:checked + label {
+        .check {
+            display: inline-block;
+        }
+        .uncheck {
+            display:none;
+        }
+    }
+}
+
+.anchor-nav {
+    position:absolute;
+    bottom:30px;
+    right:2%;
+    z-index: 100;
+}
+
+.footer {
+    background: $black;
+    height:60px;
+    .content-wrap {
+        height: 100%;
+    }
+}
